@@ -1,0 +1,190 @@
+/* ELEMENTS =========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+
+html {
+    font: normal 16px sans-serif; 
+    color: #555;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+section p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold; 
+    font-size: 60px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: "quicksand";
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0; 
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: normal;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 15px
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    width: 250px; 
+    height: 3px;
+    background-color: #3f51b5; 
+    border: 0; 
+    margin-bottom: 50px; 
+}
+
+
+/* CLASSES ================================================================================================= */
+
+
+.hero {
+    
+    color: #fff;
+    
+    /* Section Sizing */
+    width: 100%;        /* Use 100% of containing element (Body) rather than vw to avoid horizontal scroll */ 
+    height: 100vh;
+
+    /* Hero Image */
+    background-image: url(../img/main.jpg);
+    background-size: cover; 
+}
+
+.nav {
+    width: 100%;
+    position: absolute;
+    padding: 35px 100px 0px;
+    opacity: 0;
+    color: #fff;
+    
+    /* Flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    
+    animation: 1s fadein .5s forwards; 
+}
+
+@keyframes fadein {
+ 0% {
+     opacity: 0;
+ }
+ 100% {
+     opacity: .75; 
+ }
+}
+
+
+.navLinks span {
+    margin: 0 15px;
+}
+
+
+.heroInner{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100px); 
+    animation: slidefade 1s 1s forwards;
+    
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        transform: translateY(0px); 
+    }
+
+}
+
+.heroInner a.btn { 
+    padding: 20px 46px; 
+}
+
+.btn {
+    text-transform: uppercase;
+    border-radius: 4px; 
+    background: #3F52B5;
+    color: #fff;
+    font-weight: bold;
+}
+
+section h3.title {
+    font-weight: bold; 
+    font-size: 32px; 
+    font-family: 'Open Sans', sans-serif; 
+    margin-bottom: 30px; 
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destinations .grid img {
+    height: 350px;
+    padding: 20px; 
+    object-fit: cover;
+}
+
+.destinations .grid div.small {
+    flex-basis: 30%; 
+}
+
+.destinations .grid .large {
+    flex-basis: 70%; 
+}
+
+/* TEST _____ */
+
+ul {
+    list-style: none;
+}
+
+.destinations .grid li {
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.destinations .grid li.small {
+    flex-basis: 30%; 
+}
+
+.destinations .grid li.large {
+    flex-basis: 70%; 
+}
