@@ -49,6 +49,12 @@ h3 {
 
 a {
     text-decoration: none;
+    opacity: 0.75;
+    color: #fff;
+}
+
+a:hover {
+    opacity: 1; 
 }
 
 hr {
@@ -66,6 +72,7 @@ hr {
 .hero {
     
     color: #fff;
+    text-align: center;
     
     /* Section Sizing */
     width: 100%;        /* Use 100% of containing element (Body) rather than vw to avoid horizontal scroll */ 
@@ -144,6 +151,7 @@ section h3.title {
     font-size: 32px; 
     font-family: 'Open Sans', sans-serif; 
     margin-bottom: 30px; 
+    text-align: center;
 }
 
 .grid {
@@ -153,22 +161,7 @@ section h3.title {
     justify-content: center;
 }
 
-.destinations .grid img {
-    height: 350px;
-    padding: 20px; 
-    object-fit: cover;
-}
-
-.destinations .grid div.small {
-    flex-basis: 30%; 
-}
-
-.destinations .grid .large {
-    flex-basis: 70%; 
-}
-
-/* TEST _____ */
-
+/* DESTINATIONS IMAGE GRID */
 ul {
     list-style: none;
 }
@@ -188,3 +181,150 @@ ul {
 .destinations .grid li.large {
     flex-basis: 70%; 
 }
+
+/* PACKAGES ===============================================================*/
+.packages {
+    background: #F5F5F5;
+}
+
+.packages .grid li {
+    flex-basis: 50%; 
+    padding: 20px;
+    text-align: center;
+}
+
+.packages .grid li i {
+    color: #8c9eff;
+}
+
+.packages .grid li h4{
+    font-size: 30px; 
+    margin: 25px 0px; 
+}
+
+/* TESTIMONIAL SECTION ==================================================== */
+.testimonials .quote {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 40px 0 25px;
+}
+
+/* CONTACT SECTION ======================================================== */
+.contact {
+    background: #F5F5F5;
+}
+
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.contact form input {
+    padding: 15px;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #555;
+    flex: 1;
+}
+
+.contact form .btn {
+    padding: 18px 42px;
+}
+
+/* FOOTER SECTION ============================================================ */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #607d8b;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.6;
+    align-self: center;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 16px; 
+}
+
+
+
+/* BREAK POINTS =========================================================== */
+@media (max-width: 1100px){
+    .destinations .grid li.small, .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+
+    .contact form input {
+        flex-basis: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 800px){
+    .nav{
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    .nav h2{
+        margin-bottom: 15px;
+    }
+
+    .heroInner h1{
+        font-size: 48px;
+    }
+
+    .heroInner h3{
+        font-size: 24px; 
+    }
+
+    .hero {
+        min-height: 600px; 
+    }
+
+    section {
+        padding: 50px 20px; 
+    }
+
+    .destinations .grid li.small, .destinations .grid li.large {
+        flex-basis: 100%; 
+    }
+
+    .packages .grid li{
+        flex-basis: 100%;
+    }
+
+    .testimonials .quote {
+        font-size: 18px;
+        margin: 15px 0px; 
+    }
+
+    .testimonials .author {
+        font-size: 14px; 
+    }
+}
+
+
