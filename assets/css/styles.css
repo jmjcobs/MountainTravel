@@ -196,6 +196,14 @@ ul {
     margin: 25px 0px; 
 }
 
+/* TESTIMONIAL SECTION ==================================================== */
+.testimonials .quote {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 40px 0 25px;
+}
+
 
 
 /* BREAK POINTS =========================================================== */
@@ -237,6 +245,15 @@ ul {
 
     .packages .grid li{
         flex-basis: 100%;
+    }
+
+    .testimonials .quote {
+        font-size: 18px;
+        margin: 15px 0px; 
+    }
+
+    .testimonials .author {
+        font-size: 14px; 
     }
 }
 
