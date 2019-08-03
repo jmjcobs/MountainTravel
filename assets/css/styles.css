@@ -66,6 +66,7 @@ hr {
 .hero {
     
     color: #fff;
+    text-align: center;
     
     /* Section Sizing */
     width: 100%;        /* Use 100% of containing element (Body) rather than vw to avoid horizontal scroll */ 
@@ -144,6 +145,7 @@ section h3.title {
     font-size: 32px; 
     font-family: 'Open Sans', sans-serif; 
     margin-bottom: 30px; 
+    text-align: center;
 }
 
 .grid {
@@ -153,22 +155,7 @@ section h3.title {
     justify-content: center;
 }
 
-.destinations .grid img {
-    height: 350px;
-    padding: 20px; 
-    object-fit: cover;
-}
-
-.destinations .grid div.small {
-    flex-basis: 30%; 
-}
-
-.destinations .grid .large {
-    flex-basis: 70%; 
-}
-
-/* TEST _____ */
-
+/* DESTINATIONS IMAGE GRID */
 ul {
     list-style: none;
 }
@@ -188,3 +175,69 @@ ul {
 .destinations .grid li.large {
     flex-basis: 70%; 
 }
+
+/* PACKAGES ===============================================================*/
+.packages {
+    background: #F5F5F5;
+}
+
+.packages .grid li {
+    flex-basis: 50%; 
+    padding: 20px;
+    text-align: center;
+}
+
+.packages .grid li i {
+    color: #8c9eff;
+}
+
+.packages .grid li h4{
+    font-size: 30px; 
+    margin: 25px 0px; 
+}
+
+
+
+/* BREAK POINTS =========================================================== */
+@media (max-width: 1100px){
+    .destinations .grid li.small, .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 800px){
+    .nav{
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    .nav h2{
+        margin-bottom: 15px;
+    }
+
+    .heroInner h1{
+        font-size: 48px;
+    }
+
+    .heroInner h3{
+        font-size: 24px; 
+    }
+
+    .hero {
+        min-height: 600px; 
+    }
+
+    section {
+        padding: 50px 20px; 
+    }
+
+    .destinations .grid li.small, .destinations .grid li.large {
+        flex-basis: 100%; 
+    }
+
+    .packages .grid li{
+        flex-basis: 100%;
+    }
+}
+
+
