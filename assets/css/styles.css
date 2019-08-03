@@ -49,6 +49,12 @@ h3 {
 
 a {
     text-decoration: none;
+    opacity: 0.75;
+    color: #fff;
+}
+
+a:hover {
+    opacity: 1; 
 }
 
 hr {
@@ -229,6 +235,31 @@ ul {
     padding: 18px 42px;
 }
 
+/* FOOTER SECTION ============================================================ */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #607d8b;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.6;
+    align-self: center;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 16px; 
+}
+
 
 
 /* BREAK POINTS =========================================================== */
@@ -240,6 +271,15 @@ ul {
     .contact form input {
         flex-basis: 100%;
         margin: 0 0 20px 0;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        text-align: center;
+        margin-bottom: 20px;
     }
 }
 
